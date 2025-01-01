@@ -16,7 +16,7 @@ WORKDIR /dawn
 
 RUN git init && \
     git remote add origin https://github.com/google/dawn.git && \
-    git fetch --depth 1 origin b853a52d59a6c3682ab8c22e6da26ae00f9b67bd && \
+    git fetch --depth 1 origin 28b186286761d4866e8687032cdca45ef98dbe31 && \
     git checkout FETCH_HEAD && \
     python tools/fetch_dawn_dependencies.py
 
