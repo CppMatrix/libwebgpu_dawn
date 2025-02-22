@@ -1,4 +1,4 @@
-FROM ubuntu:22.04
+FROM ubuntu:24.04
 
 RUN apt update && apt install -y \
         cmake \
@@ -16,7 +16,7 @@ WORKDIR /dawn
 
 RUN git init && \
     git remote add origin https://github.com/google/dawn.git && \
-    git fetch --depth 1 origin 28b186286761d4866e8687032cdca45ef98dbe31 && \
+    git fetch --depth 1 origin c857e0e282e971ee61bc344393ab60b7a4197a7e && \
     git checkout FETCH_HEAD && \
     python tools/fetch_dawn_dependencies.py
 
